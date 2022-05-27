@@ -1,11 +1,10 @@
 ---
-
-- hosts : all
+- hosts: all
   gather_facts: true
   connection: local
   
   tasks:
-    - name : Change-hostsname-R1
+    - name: Change-hostsname-R1
       ios_config:
         lines:
           - hostname R-changed
