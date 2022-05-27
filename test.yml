@@ -1,9 +1,11 @@
 ---
-- hosts: all
-  become: yes
-  tasks:
-  - name: Updata and upgrade
-    apt:
-      upgrade: yes
-      update_cache: yes
-      cache_valid_time: 86400
+- name : Test IOS facts
+  host : routers
+  tasks :
+    - name : Gather IOS Facts
+      ios_facts:
+        gather_subset: all
+       register: all_subset
+     - name : Print subset ALL
+       debug :
+          var : all_subset
