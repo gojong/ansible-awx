@@ -1,6 +1,7 @@
 ---
 - name : Test IOS facts
-  host : routers
+  hosts : all
+  become: yes
   tasks :
     - name : Gather IOS Facts
       ios_facts:
