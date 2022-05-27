@@ -12,3 +12,5 @@
     cisco.ios.ios_command:
      commands: 
      - show run
+     
+     register: print_output
