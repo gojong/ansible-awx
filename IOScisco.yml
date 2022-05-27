@@ -1,12 +1,12 @@
 ---
-- name : Test IOS facts
-  hosts : all
+- name: Test IOS facts
+  hosts: all
   become: yes
-  tasks :
-    - name : Gather IOS Facts
+  tasks:
+    - name: Gather IOS Facts
       ios_facts:
         gather_subset: all
        register: all_subset
-     - name : Print subset ALL
-       debug :
-          var : all_subset
+     - name: Print subset ALL
+       debug:
+          var: all_subset
